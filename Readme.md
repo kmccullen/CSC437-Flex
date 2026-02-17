@@ -1,8 +1,7 @@
 Given this BNF:
 
 ```ebnf
-<id> ::= "=" <statement>
-<statement> ::= <expression>
+<statement> ::= <id> "=" <expression>
 <expression> ::= <term> <expression_prime>
 <expression_prime> ::= "+" <term> <expression_prime> | ""
 <term> ::= <factor> <term_prime>
@@ -19,3 +18,5 @@ You can limit the length of a regular expression by using {m,n} as a suffix, whi
 Write the flex input file to tokenize this grammar. Build the flex tokenizer, and tokenize the provided examples.
 
 Submit your flex input file, your lex.yy.c, and the result of running your program on the supplied input.
+
+Note: This is not fully LL(1) because of left recursion between statement and factor. Both could have id as the next token. But we'll talk about that later.
