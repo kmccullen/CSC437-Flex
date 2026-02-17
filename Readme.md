@@ -1,16 +1,13 @@
 Given this BNF:
 
+```ebnf
 <expression> ::= <term> <expression_prime>
-
 <expression_prime> ::= "+" <term> <expression_prime> | ""
-
 <term> ::= <factor> <term_prime>
-
 <term_prime> ::= "*" <factor> <term_prime> | ""
-
 <factor> ::= "(" <expression> ")" | <id>
-
 <id> ::= <int> | <variable>
+```
 
 An integer is defined as usual (sequence of digits 0..9)
 A variable can be any string starting with a-z, followed by up to 7 more letters (a-z) or numbers (0-9)
