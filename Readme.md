@@ -1,6 +1,8 @@
 Given this BNF:
 
 ```ebnf
+<id> ::= "=" <statement>
+<statement> ::= <expression>
 <expression> ::= <term> <expression_prime>
 <expression_prime> ::= "+" <term> <expression_prime> | ""
 <term> ::= <factor> <term_prime>
