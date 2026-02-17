@@ -1,10 +1,15 @@
 Given this BNF:
 
 <expression> ::= <term> <expression_prime>
+
 <expression_prime> ::= "+" <term> <expression_prime> | ""
+
 <term> ::= <factor> <term_prime>
+
 <term_prime> ::= "*" <factor> <term_prime> | ""
+
 <factor> ::= "(" <expression> ")" | <id>
+
 <id> ::= <int> | <variable>
 
 An integer is defined as usual (sequence of digits 0..9)
